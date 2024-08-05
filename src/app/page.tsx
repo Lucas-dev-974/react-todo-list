@@ -1,6 +1,6 @@
 "use client";
 
-import { AddTaskDialog } from "@/components/AddTaskDialog";
+import { AddTaskDialog } from "@/components/dialog/AddTaskDialog";
 import Button from "@/components/button/DefaultButton";
 import { TaskList } from "@/components/task/TaskList";
 import { PlusIcon } from "@/icons/PlusIcon.";
