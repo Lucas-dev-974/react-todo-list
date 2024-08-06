@@ -1,11 +1,10 @@
 "use client";
 
-import { AddTaskDialog } from "@/components/dialog/AddTaskDialog";
-import Button from "@/components/button/DefaultButton";
 import { TaskList } from "@/components/task/TaskList";
-import { PlusIcon } from "@/icons/PlusIcon.";
-import { TrashIcon } from "@/icons/TrashIcon";
 import { useState } from "react";
+import { Navbar } from "@/components/navbar/Navbar";
+import { Container } from "@/components/layout/Container";
+import { AddTask } from "@/components/task/AddTask";
 
 export type taskItemType = {
   task: string;
@@ -24,20 +23,18 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <nav className="w-full flex justify-center h-[60px] items-center bg-[#220bab]">
-        <h1 className="text-white">Tâches à réaliser</h1>
-      </nav>
+      <Navbar />
 
-      <div className="container mx-auto flex flex-col justify-center py-7">
-        <div className="mx-auto flex gap-2 items-center">
+      <Container>
+        <div className="mx-auto items-center">
           <p> Ajoutez vos tâches, et une fois réalisées, retirez-les !</p>
-          <AddTaskDialog addTask={addTask} />
+          <AddTask addTask={addTask} />
         </div>
 
         <div className="flex">
           <TaskList taskList={taskList} removeTask={removeTask} />
         </div>
-      </div>
+      </Container>
     </main>
   );
 }
