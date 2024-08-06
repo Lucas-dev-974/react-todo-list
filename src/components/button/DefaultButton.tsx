@@ -1,14 +1,15 @@
 import { ReactNode } from "react";
 import "./DefaultButton.css";
 
-interface ButtonProps {
+export interface ButtonProps {
   onClick: () => void;
-  text?: string;
+
   type: "append" | "remove";
   icon?: ReactNode;
+  text?: string;
 }
 
-export default function Button(props: ButtonProps) {
+export function Button(props: ButtonProps) {
   const child = props.icon ?? props.text;
   const classBtn = props.icon ? "btn-icon" : "btn";
 

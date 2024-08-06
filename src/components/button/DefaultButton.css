@@ -12,13 +12,18 @@
 
 
 .btn-icon{
-    @apply w-5 h-5
+    @apply w-8 h-8 p-[8px] rounded-full
 }
 
-.btn-icon > svg {
-    @apply fill-slate-50 w-full h-full
+.btn-icon.append {
+    @apply bg-[#6365f1] hover:bg-[#5355e1] cursor-pointer duration-500;
 }
 
+.btn-icon.remove {
+    @apply bg-red-600 hover:bg-red-700 cursor-pointer duration-500;
+}
+
+
 .btn-icon > svg {
-    @apply fill-[#6365f1] w-full h-full
+    @apply fill-white w-full h-full
 }
