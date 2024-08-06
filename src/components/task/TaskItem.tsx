@@ -1,5 +1,5 @@
 import { taskItemType } from "@/app/page";
-import Button from "../button/DefaultButton";
+import { Button } from "../button/DefaultButton";
 import { TrashIcon } from "@/icons/TrashIcon";
 
 interface TaskItemProps {

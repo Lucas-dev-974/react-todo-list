@@ -8,7 +8,7 @@ interface TaskListProps {
 
 export function TaskList(props: TaskListProps) {
   return (
-    <ul className="container ">
+    <ul className="container w-1/3 mx-auto">
       {props.taskList.map((task, index) => (
         <TaskItem
           task={task}
