@@ -1,0 +1,7 @@
+.task-item {
+  @apply w-full px-4 py-2 my-1 bg-blue-light rounded-md flex justify-between items-center;
+}
+
+.task-item-text {
+  @apply text-white
+}
