@@ -18,3 +18,7 @@ Dans un terminal copier et coller ligne par ligne:
  - cd react-todo-list
  - npm install
  - npm run dev
+
+Pour lancer Storybook:
+
+ - npm run storybook
