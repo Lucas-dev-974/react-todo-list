@@ -1,0 +1,3 @@
+.navbar {
+  @apply w-full flex justify-center h-[60px] items-center bg-blue-dark
+}
