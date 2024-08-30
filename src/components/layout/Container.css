@@ -1,0 +1,3 @@
+.container-custom {
+  @apply container mx-auto flex flex-col justify-center py-7;
+}
