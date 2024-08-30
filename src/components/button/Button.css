@@ -1,0 +1,29 @@
+.btn {
+    @apply px-3 py-2 rounded-md text-white;
+}
+
+.btn.append {
+    @apply bg-[#6365f1];
+}
+
+.btn.remove {
+    @apply bg-red-600;
+}
+
+
+.btn-icon {
+    @apply w-8 h-8 p-[8px] rounded-full
+}
+
+.btn-icon.append {
+    @apply bg-[#6365f1] hover:bg-[#5355e1] cursor-pointer duration-500;
+}
+
+.btn-icon.remove {
+    @apply bg-red-base hover:bg-red-700 cursor-pointer duration-500;
+}
+
+
+.btn-icon>svg {
+    @apply fill-white w-full h-full
+}
