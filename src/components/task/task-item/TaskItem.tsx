@@ -1,5 +1,5 @@
 import { Button } from "@/components/button/Button";
-import "./TaskItem.css"
+import "./TaskItem.css";
 import { CheckIcon } from "@/components/icons/CheckIcon";
 import { TrashIcon } from "@/components/icons/TrashIcon";
 // import { CheckIcon } from "@/icons/CheckIcon";
@@ -7,8 +7,8 @@ import { TrashIcon } from "@/components/icons/TrashIcon";
 export type taskItemType = {
   id: number;
   task: string;
-  archived?: boolean
-  done?: boolean
+  archived?: boolean;
+  done?: boolean;
 };
 
 export interface TaskItemProps {
@@ -20,20 +20,22 @@ export interface TaskItemProps {
 
 export function TaskItem(props: TaskItemProps) {
   return (
-    <li className="task-item" >
+    <li className="task-item">
       <p className="task-item-text">{props.task.task}</p>
       <div className="flex">
-
         <Button
           icon={<TrashIcon />}
           onClick={() => props.removeTask(props.task.id)}
           type="remove"
         />
-        <Button
-          icon={<CheckIcon />}
-          onClick={() => props.validateTask(props.task.id)}
-          type="append"
-        />
+
+        {props.task.done ? null : (
+          <Button
+            icon={<CheckIcon />}
+            onClick={() => props.validateTask(props.task.id)}
+            type="append"
+          />
+        )}
       </div>
     </li>
   );

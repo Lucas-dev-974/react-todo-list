@@ -1,0 +1,11 @@
+.dialog-layout{
+  @apply fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50;
+}
+
+.dialog-card{
+  @apply bg-white rounded-lg shadow-lg w-full max-w-lg relative;
+}
+
+.dialog-card-content {
+  @apply px-4 py-3;
+}

@@ -1,0 +1,7 @@
+.dialog-card-header {
+  @apply flex justify-between items-center p-4 mb-4 bg-blue-dark rounded-tr-lg rounded-tl-lg text-white;
+}
+
+.dialog-card-header-title {
+  @apply text-xl font-semibold;
+} 
