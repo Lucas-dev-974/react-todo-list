@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { AddTask } from "@/components/task/add-task/AddTask";
 import { taskItemType } from "@/components/task/task-item/TaskItem";
 import { TaskList } from "@/components/task/task-list/TaskList";
+import { ValidatedTaskDialog } from "@/components/task/validated-dialog/ValidatedTaskDialog";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 export default function Home() {
@@ -49,7 +50,10 @@ export default function Home() {
       <Container>
         <div className="mx-auto items-center">
           <p> Ajoutez vos tâches, et une fois réalisées, retirez-les !</p>
-          <AddTask addTask={addTask} />
+          <div className="flex">
+            <AddTask addTask={addTask} />
+            <ValidatedTaskDialog taskList={taskList} />
+          </div>
         </div>
 
         <div className="flex">
