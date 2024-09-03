@@ -16,8 +16,9 @@ const config: Config = {
       colors: {
         "blue-dark": "#220bab",
         "blue-light": "#6365f1",
-        "red-base": "#ff5555"
-      }
+        "red-base": "#ff5555",
+        "blue-light-2": "#583cff",
+      },
     },
   },
   plugins: [],
