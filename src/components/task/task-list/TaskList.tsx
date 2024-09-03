@@ -1,12 +1,9 @@
 import { taskItemType, TaskItem } from "../task-item/TaskItem";
 
-
-
 export interface TaskListProps {
   taskList: taskItemType[];
   removeTask: (taskId: number) => void;
   validateTask: (taskId: number) => void;
-
 }
 
 export function TaskList(props: TaskListProps) {
@@ -19,7 +16,8 @@ export function TaskList(props: TaskListProps) {
             key={task.id}
             removeTask={props.removeTask}
             validateTask={props.validateTask}
-          />)
+          />
+        );
       })}
     </ul>
   );
