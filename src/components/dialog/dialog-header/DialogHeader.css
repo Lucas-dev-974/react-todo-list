@@ -1,5 +1,5 @@
 .dialog-card-header {
-  @apply flex justify-between items-center p-4 mb-4 bg-blue-dark rounded-tr-lg rounded-tl-lg text-white;
+  @apply flex justify-between items-center p-4 mb-4 bg-blue-light-2 rounded-tr-lg rounded-tl-lg text-white;
 }
 
 .dialog-card-header-title {
