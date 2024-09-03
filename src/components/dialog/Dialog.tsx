@@ -1,15 +1,15 @@
 import React, { useRef, useEffect, ReactNode } from "react";
 import { DialogHeader } from "./dialog-header/DialogHeader";
+import { DialogActions } from "./dialog-actions/DialogActions";
 
 import "./Dialog.css";
-import { DialogActions } from "./dialog-actions/DialogActions";
 
 interface DialogProps {
   title: string;
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
-  actions?: ReactNode;
+  confirm: () => void;
 }
 
 export function Dialog(props: DialogProps) {
@@ -36,7 +36,7 @@ export function Dialog(props: DialogProps) {
 
         <div className="dialog-card-content">{props.children}</div>
 
-        {props.actions && <DialogActions actions={props.actions} />}
+        <DialogActions close={props.onClose} confirm={props.confirm} />
       </div>
     </div>
   );

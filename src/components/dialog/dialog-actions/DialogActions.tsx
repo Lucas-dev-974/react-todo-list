@@ -1,10 +1,18 @@
-import { ReactNode } from "react";
+import "./DialogActions.css";
+import { Button } from "@/components/button/Button";
+
 import "./DialogActions.css";
 
 interface DialogActionsProps {
-  actions: ReactNode;
+  close: () => void;
+  confirm: () => void;
 }
 
 export function DialogActions(props: DialogActionsProps) {
-  return <div className="flex justify-end space-x-2 px-4">{props.actions}</div>;
+  return (
+    <div className="dialog-actions">
+      <Button onClick={props.close} type="remove" text="Fermer" />
+      <Button onClick={props.confirm} type="append" text="Confirmer" />
+    </div>
+  );
 }
