@@ -2,6 +2,7 @@ import { Button } from "@/components/button/Button";
 import "./TaskItem.css";
 import { CheckIcon } from "@/components/icons/CheckIcon";
 import { TrashIcon } from "@/components/icons/TrashIcon";
+import { BackIcon } from "@/components/icons/BackIcon";
 // import { CheckIcon } from "@/icons/CheckIcon";
 
 export type taskItemType = {
@@ -29,7 +30,13 @@ export function TaskItem(props: TaskItemProps) {
           type="remove"
         />
 
-        {props.task.done ? null : (
+        {props.task.done ? (
+          <Button
+            icon={<BackIcon />}
+            onClick={() => props.validateTask(props.task.id)}
+            type="append"
+          />
+        ) : (
           <Button
             icon={<CheckIcon />}
             onClick={() => props.validateTask(props.task.id)}

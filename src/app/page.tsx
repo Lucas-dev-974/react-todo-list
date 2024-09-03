@@ -29,11 +29,11 @@ export default function Home() {
     });
   }
 
-  function validateTask(taskId: number) {
+  function toggleTaskDone(taskId: number) {
     setTaskList((prev) => {
       if (!prev) return [];
       return taskList.map((task) => {
-        if (task.id == taskId) task.done = true;
+        if (task.id == taskId) task.done = !task.done;
         return task;
       });
     });
@@ -52,7 +52,11 @@ export default function Home() {
           <p> Ajoutez vos tâches, et une fois réalisées, retirez-les !</p>
           <div className="flex">
             <AddTask addTask={addTask} />
-            <ValidatedTaskDialog taskList={taskList} />
+            <ValidatedTaskDialog
+              taskList={taskList}
+              removeTask={removeTask}
+              toggleTaskValidation={toggleTaskDone}
+            />
           </div>
         </div>
 
@@ -60,7 +64,7 @@ export default function Home() {
           <TaskList
             taskList={taskFilter()}
             removeTask={removeTask}
-            validateTask={validateTask}
+            validateTask={toggleTaskDone}
           />
         </div>
       </Container>

@@ -9,6 +9,8 @@ import "./ValidatedTaskDialog.css";
 
 interface ValidatedTaskDialog {
   taskList: taskItemType[];
+  removeTask: (taskId: number) => void;
+  toggleTaskValidation: (taskId: number) => void;
 }
 export function ValidatedTaskDialog(props: ValidatedTaskDialog) {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -30,9 +32,9 @@ export function ValidatedTaskDialog(props: ValidatedTaskDialog) {
         confirm={closeDialog}
       >
         <TaskList
-          removeTask={() => {}}
+          removeTask={props.removeTask}
           taskList={filteredTaskDone()}
-          validateTask={() => {}}
+          validateTask={props.toggleTaskValidation}
         />
       </Dialog>
     </div>
